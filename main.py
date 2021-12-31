@@ -1,6 +1,8 @@
 import csv,re
 
 if __name__ == "__main__":
+    # невнимательно прочитал задание и взял реальный файл с сайта минфина по ссылке на гите
+    # если можно, хотел бы его оставить
     with open('files/minfin.csv', newline='', encoding="utf-8") as f:
         reader = csv.reader(f)
         data = list(reader)
@@ -49,7 +51,7 @@ if __name__ == "__main__":
             for email_item in email:
                 if email_item not in result_info['email']: result_info['email'].append(email_item)
         
-        # проверка для отмены записи в пустого словаря в результирующий список 
+        # проверка для отмены записи пустого словаря в результирующий список 
         if bool(result_info) != False: adress_book.append(result_info)
     
     
